@@ -61,6 +61,7 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.txtUserblock = new System.Windows.Forms.TextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.cmbRoutingPrefer = new System.Windows.Forms.ComboBox();
             this.btnSetDefRountingRule = new System.Windows.Forms.Button();
             this.cmbdomainStrategy = new System.Windows.Forms.ComboBox();
             this.labRoutingTips = new System.Windows.Forms.Label();
@@ -331,6 +332,7 @@
             // 
             // panel3
             // 
+            this.panel3.Controls.Add(this.cmbRoutingPrefer);
             this.panel3.Controls.Add(this.btnSetDefRountingRule);
             this.panel3.Controls.Add(this.cmbdomainStrategy);
             this.panel3.Controls.Add(this.labRoutingTips);
@@ -339,6 +341,16 @@
             this.panel3.Controls.Add(this.cmbroutingMode);
             resources.ApplyResources(this.panel3, "panel3");
             this.panel3.Name = "panel3";
+            // 
+            // cmbRoutingPrefer
+            // 
+            this.cmbRoutingPrefer.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmbRoutingPrefer.FormattingEnabled = true;
+            this.cmbRoutingPrefer.Items.AddRange(new object[] {
+            resources.GetString("cmbRoutingPrefer.Items"),
+            resources.GetString("cmbRoutingPrefer.Items1")});
+            resources.ApplyResources(this.cmbRoutingPrefer, "cmbRoutingPrefer");
+            this.cmbRoutingPrefer.Name = "cmbRoutingPrefer";
             // 
             // btnSetDefRountingRule
             // 
@@ -619,5 +631,6 @@
         private System.Windows.Forms.CheckBox chksniffingEnabled;
         private System.Windows.Forms.CheckBox chksniffingEnabled2;
         private System.Windows.Forms.Button btnSetDefRountingRule;
+        private System.Windows.Forms.ComboBox cmbRoutingPrefer;
     }
 }

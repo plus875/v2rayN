@@ -78,6 +78,10 @@ namespace v2rayN.Handler
             {
                 config.routingMode = "0";
             }
+            if (Utils.IsNullOrEmpty(config.blackOrWhite))
+            {
+                config.blackOrWhite = "0";
+            }
             if (config.useragent == null)
             {
                 config.useragent = new List<string>();

@@ -51,6 +51,11 @@ namespace v2rayN.Mode
         public string routingMode { get; set; }
 
         /// <summary>
+        /// 黑白名单
+        /// </summary>
+        public string blackOrWhite { get; set; }
+
+        /// <summary>
         /// 用户自定义需代理的网址或ip
         /// </summary>
         public List<string> useragent { get; set; }

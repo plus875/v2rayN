@@ -288,4 +288,10 @@
   <data name="$this.Text" xml:space="preserve">
     <value>参数设置</value>
   </data>
+  <data name="cmbRoutingPrefer.Items" xml:space="preserve">
+    <value>黑名单模式</value>
+  </data>
+  <data name="cmbRoutingPrefer.Items1" xml:space="preserve">
+    <value>白名单模式</value>
+  </data>
 </root>

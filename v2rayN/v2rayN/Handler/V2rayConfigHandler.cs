@@ -385,7 +385,19 @@ namespace v2rayN.Handler
                     outbound.protocol = "shadowsocks";
                     outbound.settings.vnext = null;
                 }
+
+                int isBlacklist = 0;
+                int.TryParse(config.blackOrWhite, out isBlacklist);
+                if (isBlacklist == 0)
+                {
+                    //freedom优先
+                    var vmess = v2rayConfig.outbounds[0];
+                    var freedom = v2rayConfig.outbounds[1];
+                    v2rayConfig.outbounds[0] = freedom;
+                    v2rayConfig.outbounds[1] = vmess;
+                }
             }
+
             catch
             {
             }

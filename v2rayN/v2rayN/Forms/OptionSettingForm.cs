@@ -74,6 +74,10 @@ namespace v2rayN.Forms
             int.TryParse(config.routingMode, out routingMode);
             cmbroutingMode.SelectedIndex = routingMode;
 
+            int outboundPrefer = 0;
+            int.TryParse(config.blackOrWhite, out outboundPrefer);
+            cmbRoutingPrefer.SelectedIndex = outboundPrefer;
+
             txtUseragent.Text = Utils.List2String(config.useragent, true);
             txtUserdirect.Text = Utils.List2String(config.userdirect, true);
             txtUserblock.Text = Utils.List2String(config.userblock, true);
@@ -229,6 +233,7 @@ namespace v2rayN.Forms
             //路由            
             string domainStrategy = cmbdomainStrategy.Text;
             string routingMode = cmbroutingMode.SelectedIndex.ToString();
+            string blackWhitePrefer = cmbRoutingPrefer.SelectedIndex.ToString();
 
             string useragent = txtUseragent.Text.Trim();
             string userdirect = txtUserdirect.Text.Trim();
@@ -236,6 +241,7 @@ namespace v2rayN.Forms
 
             config.domainStrategy = domainStrategy;
             config.routingMode = routingMode;
+            config.blackOrWhite = blackWhitePrefer;
 
             config.useragent = Utils.String2List(useragent);
             config.userdirect = Utils.String2List(userdirect);
